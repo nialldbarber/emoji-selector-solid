@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.scrollContainer {
+  border: 1px dashed gray;
+  overflow: auto;
+  width: 400px;
+  height: 400px;
+  resize: both;
+  padding: 0 16px;
+  /* Make scroller composited for faster scrolling,
+   * the downside of that is that on lower
+   * end devices Browser will scroll first and
+   * then render DOM, making some content flash white.
+   */
+  /* will-change: transform; */
+}
+
+.scrollContainerHorizontal {
+  border: 1px dashed gray;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 100%;
+  height: 400px;
+  max-width: 400px;
+  display: flex;
+  /* You can use padding too, or style
+   * your scroll container however you like
+   */
+  padding: 50px;
+}
+
+.listItem {
+  border: 1px solid grey;
+  width: 100%;
+  height: 100%;
+}
